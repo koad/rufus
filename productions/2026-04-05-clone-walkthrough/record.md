@@ -29,7 +29,7 @@ distribution-owner: mercury
 
 ## What This Video Is
 
-A live terminal screencast demonstrating the sovereign entity model of koad:io. The viewer watches a fresh directory being cloned from GitHub, explores what's inside, reads Sibyl's identity memory, and boots the entity with a single prompt.
+A live terminal screencast demonstrating the sovereign entity model of koad:io. The viewer watches a fresh directory being cloned from GitHub, explores what's inside (README.md, CLAUDE.md, the hook), and boots the entity with a single prompt.
 
 **Core message:** "Not your keys, not your agent. Files on disk."
 
@@ -41,7 +41,7 @@ A live terminal screencast demonstrating the sovereign entity model of koad:io. 
 
 | Field | Value |
 |-------|-------|
-| Entity featured | Sibyl (koad/sibyl) |
+| Entity featured | Chiron (koad/chiron) |
 | Recording hardware | thinker (primary) |
 | Capture method | asciinema + ffmpeg or OBS screen capture |
 | Voice-over | Live (during recording) |
@@ -53,11 +53,11 @@ A live terminal screencast demonstrating the sovereign entity model of koad:io. 
 
 ## Key Decisions
 
-**Why Sibyl (not Juno or another entity)?**
-Sibyl is the simplest entity to demo. Her identity is clean, her role is clear, and she runs without side effects (research-only, no GitHub actions, no external API calls required). The demo stays self-contained.
+**Why Chiron (not Juno or another entity)?**
+Chiron is already on GitHub (koad/chiron), has a clean README, a well-defined role with hard scope edges, and a hook that demonstrates both prompt-driven and interactive modes. His CLAUDE.md explicitly enumerates what he owns and does not own — making the scope conversation legible to a general audience without requiring technical knowledge.
 
-**Why `who are you?` as the boot prompt?**
-It's the most legible prompt for a general audience. The answer proves identity persistence without requiring technical knowledge to verify. Viewers can immediately see that the entity knows its own context.
+**Why `what is your role?` as the boot prompt?**
+It's the most direct identity verification a viewer can follow. Chiron's answer will reference curriculum architecture, pedagogy, and team position — all of which can be verified against the files the viewer just watched scroll by. The alignment between the memory files and the live response is the proof.
 
 **Why terminal-only (no face cam)?**
 This is a terminal video. The aesthetic IS the argument. A face cam would distract and add production complexity. The thumbnail does not require a face.
@@ -79,11 +79,11 @@ See `script.md` for YouTube title, description, tags, and thumbnail concept.
 
 ## Pre-Recording Checklist
 
-- [ ] `~/.sibyl` exists and is up to date (`cd ~/.sibyl && git pull`)
-- [ ] `sibyl` command is on PATH and working (`PROMPT='test' sibyl`)
+- [ ] `~/.chiron` exists and is up to date (`cd ~/.chiron && git pull`)
+- [ ] `chiron` command is on PATH and working (`PROMPT='test' chiron`)
 - [ ] Terminal configured: black bg, white text, 16px+ monospace, no prompt decorations
 - [ ] Clear scrollback before take: `clear && printf '\033[3J'`
-- [ ] `~/.sibyl-demo` does NOT exist (clean demo environment)
+- [ ] `~/.chiron-demo` does NOT exist (clean demo environment)
 - [ ] Recording software armed (OBS or screen recorder)
 - [ ] Quiet environment for voice-over
 

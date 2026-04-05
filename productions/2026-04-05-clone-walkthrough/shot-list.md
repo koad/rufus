@@ -15,12 +15,12 @@ status: production-ready
 - [ ] Font: JetBrains Mono (or Fira Code / Hack) at 16–18px
 - [ ] Shell prompt: minimal — `$ ` or `~$` only. No git decorations, no powerline
 - [ ] Clear scrollback before each take: `clear && printf '\033[3J'`
-- [ ] Confirm `~/.sibyl-demo` does NOT exist: `ls ~/.sibyl-demo 2>&1`
+- [ ] Confirm `~/.chiron-demo` does NOT exist: `ls ~/.chiron-demo 2>&1`
 - [ ] Confirm git installed and GitHub reachable: `git --version && ping -c1 github.com`
-- [ ] `sibyl` command on PATH and working (test on separate terminal)
-- [ ] OBS (or screen recorder) armed: resolution 1920x1080 or 2560x1440, 60fps preferred
+- [ ] `chiron` command on PATH and working (test on a separate terminal, not recording terminal)
+- [ ] OBS (or screen recorder) armed: 1920x1080 or 2560x1440, 60fps preferred
 - [ ] Mic check: quiet room, gain test with a sentence or two
-- [ ] Scrollback buffer: large (10,000+ lines) so nothing disappears mid-take
+- [ ] Scrollback buffer large (10,000+ lines) so nothing disappears mid-take
 
 ---
 
@@ -29,33 +29,34 @@ status: production-ready
 **Segment:** SEGMENT 1 (0:00–0:10)
 **Duration:** ~10 seconds
 
-**What camera/screen shows:**
+**What the screen shows:**
 - Terminal window, nothing but the shell prompt
 - Cursor blinking
 
-**What to type:** Nothing yet
+**What to type:** Nothing yet.
+
 **What to say:**
 > "This terminal is empty. I'm not logged into anything. I'm going to run one command."
 
 **Technical notes:**
 - Pause 2–3 seconds after opening before speaking — gives editor a clean cut point
-- No split screen here. Full terminal only.
+- No split screen. Full terminal only.
 
 ---
 
 ## Shot 2: The Clone
 
 **Segment:** SEGMENT 1 (0:10–0:45)
-**Duration:** ~35 seconds (includes clone output)
+**Duration:** ~35 seconds (includes git output)
 
 **What to type:**
 ```
-git clone https://github.com/koad/sibyl ~/.sibyl-demo
+git clone https://github.com/koad/chiron ~/.chiron-demo
 ```
 
 **Expected output:**
 ```
-Cloning into '/Users/[you]/.sibyl-demo'...
+Cloning into '/home/[you]/.chiron-demo'...
 remote: Enumerating objects: ...
 remote: Counting objects: ...
 remote: Compressing objects: ...
@@ -64,12 +65,13 @@ Resolving deltas: 100% (...), done.
 ```
 
 **What to say (while clone runs):**
-> "That's it. One command. That cloned Sibyl — a koad:io research entity — to my local disk."
+> "That's it. One command. That cloned Chiron — a koad:io curriculum architect
+> entity — to my local disk."
 
 **Technical notes:**
 - Type at normal speech pace — deliberate, not rushed
-- Let all output scroll naturally. Do NOT cut during git output.
-- If clone fails (network hiccup): stop recording, clear terminal, retry
+- Let all git output scroll naturally. Do NOT cut during git output.
+- If clone fails (network): stop recording, check network, retry from Shot 1
 - Retake trigger: any typo requiring more than one backspace
 
 ---
@@ -81,19 +83,20 @@ Resolving deltas: 100% (...), done.
 
 **What to type:**
 ```
-cd ~/.sibyl-demo
+cd ~/.chiron-demo
 ls
 ```
 
 **Expected output:**
 ```
-CLAUDE.md       GOVERNANCE.md  KOAD_IO_VERSION  MEMORY.md      README.md  features  identity  memories     research
-commands        documentation  hooks             passenger.json  trust
+CLAUDE.md   README.md    commands    curricula    etc     hooks
+id          keybase      memories    positioning  trust
 ```
 *(exact layout depends on terminal width — acceptable either way)*
 
 **What to say:**
-> "This is the entity. A directory. A git repo. Files on disk. Let me show you what matters."
+> "This is the entity. A directory. A git repo. Files on disk. Let me show you
+> what matters."
 
 **Technical notes:**
 - Short pause after `ls` output before speaking — let viewer read the listing
@@ -101,168 +104,146 @@ commands        documentation  hooks             passenger.json  trust
 
 ---
 
-## Shot 4: Memories Directory
+## Shot 4: Cat README.md
 
-**Segment:** SEGMENT 2 (1:05–1:25)
-**Duration:** ~20 seconds
+**Segment:** SEGMENT 2 (1:05–1:45)
+**Duration:** ~40 seconds
 
 **What to type:**
 ```
-ls memories/
+cat README.md
 ```
 
-**Expected output:**
-```
-001-identity.md  002-operational-preferences.md  003-team-invocation.md  004-home-machine.md  005-peer-ring-model.md
-```
+**Expected output:** Full README (~40 lines). Includes entity description, role statement, what Chiron owns.
 
-**What to say:**
-> "Sibyl's memory. She reads these every time she boots. She knows who she is, what her role is, who she works with. Not in a cloud database — in these files."
+**What to say (reading along with key lines):**
+
+As file begins:
+> "Chiron. Named for the centaur who taught Achilles, Jason, Heracles."
+
+On the role block:
+> "Curriculum architect. He owns the structure — the learning paths Alice
+> delivers to humans."
+
+After file finishes:
+> "This is the public identity. Anyone who clones this repo reads exactly this."
 
 **Technical notes:**
-- Linger on this output for 2–3 seconds before moving on
+- Do not pipe to `head`. Full cat. The full scroll is the point.
+- Let file display for 2–3 seconds after it finishes before moving on.
 
 ---
 
-## Shot 5: Hooks Directory
+## Shot 5: Cat CLAUDE.md
 
-**Segment:** SEGMENT 2 (1:25–1:40)
-**Duration:** ~15 seconds
-
-**What to type:**
-```
-ls hooks/
-```
-
-**Expected output:**
-```
-executed-without-arguments.md  executed-without-arguments.sh
-```
-
-**What to say:**
-> "Hooks. This script fires when you run `sibyl` with no arguments — routes you into an interactive session or single-prompt mode."
-
----
-
-## Shot 6: Identity Directory
-
-**Segment:** SEGMENT 2 (1:40–1:55)
-**Duration:** ~15 seconds
+**Segment:** SEGMENT 2 (1:45–2:00)
+**Duration:** ~15 seconds setup, then let it scroll
 
 **What to type:**
 ```
-ls identity/
+cat CLAUDE.md
 ```
 
-**What to say:**
-> "Cryptographic identity. Sibyl has her own keys — Ed25519, ECDSA. Not tied to your account. Her own sovereign identity."
+**Expected output:** Full CLAUDE.md — entity identity, two-layer architecture description, what Chiron owns and does not own, team relationships.
 
----
+**What to say (reading along with key sections):**
 
-## Shot 7: Trust Directory
+As file begins to scroll:
+> "CLAUDE.md. This is what the AI reads at the start of every session. Not a
+> system prompt I typed — a file on disk."
 
-**Segment:** SEGMENT 2 (1:55–2:15)
-**Duration:** ~20 seconds
+On the two-layer architecture block:
+> "Framework layer handles the runtime. Entity layer — this directory — handles
+> the identity. The framework doesn't care which entity. It reads the files."
 
-**What to type:**
-```
-ls trust/
-```
-
-**What to say:**
-> "Trust bonds. GPG-signed authorization files. Who can Sibyl act for, and with what scope. Governance on disk — no admin panel, no dashboard."
+On the owns/does-not-own table:
+> "Scope. He designs curricula. He doesn't build the software, doesn't publish,
+> doesn't do the research — those are other entities. Every entity has hard
+> edges."
 
 **Technical notes:**
-- End of the directory tour. Brief natural pause before moving to memory cat.
+- CLAUDE.md is long. Let it scroll — don't cut it short. ~60 seconds of scroll is acceptable.
+- VO should pace with the scroll, not race ahead of it.
+- This is the second most important shot after Shot 7 (the boot). Don't rush.
 
 ---
 
-## Shot 8: Cat the Identity Memory
+## Shot 6: Cat the Hook
 
-**Segment:** SEGMENT 3 (2:30–4:00)
-**Duration:** ~90 seconds — this is the emotional center
+**Segment:** SEGMENT 3 (2:00–2:45)
+**Duration:** ~45 seconds
 
 **What to type:**
 ```
-cat memories/001-identity.md
+cat hooks/executed-without-arguments.sh
 ```
 
-**Expected output:** Full content of 001-identity.md (known — approximately 50–60 lines)
+**Expected output:** The hook script (~30 lines). Contains:
+- LOCKFILE logic (PID-based)
+- PROMPT detection (empty vs. set)
+- Two branches: `-p "$DECODED"` for prompt mode, `-c` for interactive mode
+- base64 encode/decode of the prompt
 
-**What to say (reading along, pacing with the scroll):**
+**What to say (reading the key logic blocks):**
 
-As file begins to show:
-> "This is what she reads first."
+On the PROMPT detection:
+> "If you set a PROMPT env variable — single-shot mode. If you didn't — you
+> get an interactive session."
 
-On the Core Principles block (`Signal over noise...`):
-> "Signal over noise. The hard part is knowing what to ignore. Research is input, not output."
+On the LOCKFILE block:
+> "PID lock. If Chiron is already running, you get a message: he's busy. Try
+> again shortly. This is an entity that can run autonomously — it needs to
+> protect against concurrent invocations."
 
-On the Trust Chain block:
-> "Her place in the team: under Juno, delivering to Mercury. Clear scope. She doesn't publish, doesn't decide — she researches."
+On the base64 encode/decode:
+> "The prompt is base64-encoded before being passed to the model. Clean
+> handling — no shell injection, no quoting issues."
 
-After file finishes scrolling:
-> "This is a Markdown file. You can edit it. Fork this repo, change her identity, give her a different role. The framework doesn't care. It reads the files."
+After file ends:
+> "One hook. That's the entire invocation layer. Everything else is in the
+> entity's identity files."
 
 **Technical notes:**
-- **This is the most important shot.** Do not rush the scroll.
-- If the file is long, let it scroll — don't pipe to `head`. Full file is the point.
-- Optional: add a slow manual scroll-pause after the file displays, to let viewer absorb
-- If voiceover feels rushed: pause the cat output is not possible — consider a second take with slower, more deliberate delivery
+- This is the most technical segment. Keep VO plain-language throughout.
+- Pause on each key block (LOCKFILE, PROMPT branch, base64) before speaking about it — let viewer read first.
+- Do not rush to keep runtime short. This earns technical credibility.
 
 ---
 
-## Shot 9: First Prompt — Who Are You?
+## Shot 7: First Prompt — What Is Your Role?
 
-**Segment:** SEGMENT 4 (4:00–5:00)
-**Duration:** ~60 seconds (includes entity boot and response)
+**Segment:** SEGMENT 4 (2:45–4:30)
+**Duration:** ~90 seconds (includes boot latency and response)
 
 **What to type:**
 ```
-PROMPT='who are you?' sibyl
+PROMPT='what is your role?' chiron
 ```
 
 **What to say while waiting for response:**
-> "Prompt-driven mode. Sibyl reads her memory, loads her identity, executes the question, returns output."
+> "Prompt-driven mode. Chiron reads his memory, loads his identity, executes
+> the question, returns output. Watch."
 
 **When response appears — highlight these points in VO:**
-- Entity names herself
-- States her role accurately (research, intelligence)
-- Mentions her trust chain or team position
-- Output format matches what 001-identity.md promised
+- Entity names itself (Chiron)
+- States role correctly (curriculum architect / educator)
+- Mentions what it owns vs. what other entities own
+- Reflects the specific pedagogy from the identity memory (progressive disclosure, knowledge atoms, exit criteria)
 
 **What to say after response:**
-> "She knows she's Sibyl. She knows her role. That's not a system prompt I typed — that's her memory, on disk, loaded at boot."
+> "He knows he's Chiron. He knows his scope. That's not a system prompt I
+> typed — that's his memory, on disk, loaded at boot."
 
 **Technical notes:**
-- Response time depends on model/hardware — accept natural latency, don't cut
-- If Sibyl fails to boot: stop, diagnose in a separate terminal, retry when resolved
-- Retake trigger: entity gives generic response not grounded in her memory
+- Response time depends on model/hardware. Accept natural latency — do NOT cut the waiting time to under 3 seconds. The wait IS part of the sovereignty proof.
+- If Chiron fails to boot: stop, diagnose in a separate terminal, retry when resolved
+- Retake trigger: entity gives generic AI response not grounded in its memory files
 
 ---
 
-## Shot 10: Optional Second Prompt
+## Shot 8: The Close — pwd
 
-**Segment:** SEGMENT 4 (5:00–5:30)
-**Duration:** ~30 seconds
-
-**Include if:** First demo is clean and total runtime is under 5:30.
-
-**What to type:**
-```
-PROMPT='what are your research responsibilities?' sibyl
-```
-
-**What to say while waiting:**
-> "Let's give her a scope question."
-
-**When response appears:**
-> "Market landscape, competitive analysis, audience intelligence, technical deep-dives. Every brief ends in an actionable recommendation. She's not just summarizing — she's prescribing."
-
----
-
-## Shot 11: The Close — pwd
-
-**Segment:** SEGMENT 5 (5:45–6:30)
+**Segment:** SEGMENT 5 (4:30–5:15)
 **Duration:** ~45 seconds
 
 **What to type:**
@@ -272,13 +253,14 @@ pwd
 
 **Expected output:**
 ```
-/Users/[you]/.sibyl-demo
+/home/[you]/.chiron-demo
 ```
 
-**What to say — slow down here, let each sentence land:**
+**What to say — slowest pacing in the video. One sentence, one breath, one pause:**
+
 > "That's it."
 
-*(pause)*
+*(pause — 2 seconds)*
 
 > "This runs on your disk. No cloud account. No vendor. No subscription."
 
@@ -294,25 +276,25 @@ pwd
 
 > "That's koad:io. Not vaporware. Files on disk."
 
-*(pause)*
+*(pause — let it land)*
 
 > "Link in the description. Clone it yourself."
 
 **Technical notes:**
-- **Slowest pacing in the video.** Do not rush.
-- Each sentence = one breath. Pause between sentences is intentional — not dead air.
-- Editor: do NOT cut these pauses. They are part of the tone.
+- Slowest pacing in the video.
+- Each sentence = one breath. Pauses between sentences are intentional beats — not dead air.
+- Editor: do NOT cut these pauses. They are structural.
 
 ---
 
-## Shot 12: Fade / Cut to Black
+## Shot 9: Fade / Cut to Black
 
 **Duration:** 2–3 seconds
 
-- No music needed
+- No music
 - No end screen animation
 - Simple cut to black or 1-second fade
-- Optional: hold on the terminal with the `pwd` output for 1 extra second before fade
+- Optional: hold on the terminal with `pwd` output for 1 extra second before fade
 
 ---
 
@@ -322,20 +304,21 @@ pwd
 |-----------|------|
 | After Shot 1 | Clean cut — no gap needed |
 | During Shot 2 (git clone) | Do NOT cut git output. Full scroll must show. |
-| Shot 8 (cat memories) | Do NOT speed up. This is the core. |
-| Shot 9 (PROMPT=...) | Accept natural latency. Do not cut waiting time to < 3s. |
-| Shot 11 (close) | Do NOT cut pauses between sentences. Intentional. |
+| Shot 5 (cat CLAUDE.md) | Do NOT cut short — full file is the point |
+| Shot 6 (hook) | Pause on each logic block before VO; do not rush |
+| Shot 7 (PROMPT=...) | Accept natural latency. Do not cut wait time to < 3s. |
+| Shot 8 (close) | Do NOT cut pauses. Intentional beats. |
 
 **Cuts to remove:**
 - Any backspace or typo correction (retake if > 1 backspace)
-- Any pause > 8 seconds outside of intentional beats
-- Any window/focus switch
+- Any pause > 8 seconds outside of intentional beats in Shot 8
+- Any window or focus switch
 
 **No:**
 - No zoom effects
 - No lower-thirds
 - No background music
-- No speed ramp except: short segments of `ls` commands may be trimmed by up to 30% if there is excessive dead air between command and VO
+- No speed ramp (short `ls` segments may be trimmed by up to 30% if dead air is excessive)
 
 ---
 
@@ -344,10 +327,10 @@ pwd
 | Failure | Response |
 |---------|----------|
 | `git clone` fails (network) | Kill recording. Check network. Retry from Shot 1. |
-| `sibyl` command not found | Kill recording. Fix PATH/install. Do not patch on camera. |
-| Sibyl gives generic/broken response | Kill recording. Check Sibyl config. Retry Shot 9 from that segment (or full retake if flow is broken). |
+| `chiron` command not found | Kill recording. Fix PATH. Do not patch on camera. |
+| Chiron gives generic/ungrounded response | Kill recording. Check entity config. Retry Shot 7, or full retake if flow is broken. |
 | flowbie unavailable | Record from thinker. Same instructions apply. |
-| Take goes > 8 minutes | Trim Shot 10 (optional prompt) and/or tighten Shot 2 VO. |
+| Take goes > 8 minutes | Tighten Shot 5 (CLAUDE.md VO) — reduce commentary, let scroll carry more weight. |
 
 ---
 
