@@ -202,12 +202,133 @@ signal, ideal content format, one concrete posting strategy.
 - Export: `2026-04-07-sibyl-research-final.mp4` + 1-min Twitter/X clip
 
 **Full shot list / script:** `~/.rufus/productions/2026-04-07-sibyl-research/shot-list.md`
+**Full record:** `~/.rufus/productions/2026-04-07-sibyl-research/record.md`
 
 ---
 
-## Section 2: In Development
+### VIDEO 4 — "Show HN: Agent Home Directory"
 
-These videos have production records started but are missing script or shot list. Not ready to record.
+**Production directory:** `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/`
+**Calendar day:** Day 10 (Thursday, April 10)
+**Pillar:** Reality
+**Series:** Week 2 Reality Pillar
+**Type:** Terminal screencast, voice-over live (Tier 3 — no camera required)
+**Estimated session time:** 40–55 minutes total (15 min pre-check, 20 min recording, 10 min review)
+**Runtime target:** 4–6 minutes
+**Machine:** thinker (primary)
+
+**Prerequisites (must confirm before hitting record):**
+- [ ] `~/.juno` is current: `cd ~/.juno && git pull`
+- [ ] `git log --author="Juno" --oneline` returns 6+ days of commits (verify count before recording)
+- [ ] `~/.juno/trust/bonds/juno-to-sibyl.md.asc` exists and is verifiable
+- [ ] GPG key for Juno imported locally: `gpg --list-keys juno@kingofalldata.com`
+- [ ] `gpg --verify ~/.juno/trust/bonds/juno-to-sibyl.md.asc` returns "Good signature"
+- [ ] `~/.juno/memories/001-identity.md` exists and is current
+- [ ] Terminal configured: black bg (#000000), white text, 16px+ monospace, no prompt decorations
+- [ ] Clear scrollback before take: `clear && printf '\033[3J'`
+- [ ] Recording software armed (OBS or asciinema)
+- [ ] Quiet environment for voice-over
+
+**Recording command:**
+```bash
+asciinema rec \
+  --title "Show HN: Agent Home Directory — Three Commands, Then git log" \
+  --idle-time-limit 2 \
+  --env TERM,SHELL \
+  ~/.rufus/recordings/2026-04-10-show-hn-raw.cast
+# OBS alternative: arm at 1920x1080, 60fps, black background capture
+```
+
+**What you record (7 shots, in order):**
+1. Empty terminal → voice-over opening: "Three commands. That's all I'm going to run."
+2. `cat ~/.juno/memories/001-identity.md` — let it scroll fully, do not cut short
+3. `gpg --verify ~/.juno/trust/bonds/juno-to-sibyl.md.asc` → "Good signature" is the money shot; then `cat ~/.juno/trust/bonds/juno-to-sibyl.md`
+4. `git -C ~/.juno log --author="Juno" --oneline` — DO NOT CUT, DO NOT SPEED RAMP — full scroll is the emotional core; then `| wc -l` as punctuation beat
+5. `git -C ~/.juno remote -v` — brief bridge: "Remote is GitHub. But the entity lives here."
+6. `git clone https://github.com/koad/juno` → `cat juno/memories/001-identity.md` — call to action close
+7. Fade to black — no music, no end card
+
+**Retake triggers:** Any typo needing more than one backspace. `gpg --verify` returns anything other than "Good signature from...". `git log` returns zero commits or wrong author. Any window/focus switch during recording.
+
+**Post-production (see Section 5):**
+- DO NOT cut or speed-ramp Shot 4 (git log scroll) — this is the emotional core
+- Trim dead air at start/end only
+- Extract thumbnail: frame when git log fills the screen (Shot 4)
+- Export: `2026-04-10-show-hn-final.mp4` + Twitter/X 60s clip starting at git log scroll
+- YouTube metadata: in `script.md` — title, description, tags
+- Mercury distribution: YouTube + Twitter/X 60s clip + HackerNews comment thread + Dev.to embed
+
+**Full script:** `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/script.md`
+**Full shot list:** `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/shot-list.md`
+**Full record:** `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/record.md`
+
+---
+
+### VIDEO 5 — "The Week 1 Skeptics Were Right"
+
+**Production directory:** `~/.rufus/productions/2026-04-12-week1-skeptics/`
+**Calendar day:** Day 12 (Saturday, April 12)
+**Pillar:** Reality
+**Series:** Week 2 Reality Pillar
+**Type:** Terminal screencast + browser, voice-over live (Tier 3 — no camera required)
+**Estimated session time:** 60–80 minutes total (20 min pre-check, 30 min recording, 20 min review)
+**Runtime target:** 7–9 minutes
+**Machine:** thinker (primary)
+
+**Prerequisites (must confirm before hitting record):**
+- [ ] `~/.juno` is current: `cd ~/.juno && git pull`
+- [ ] `gh auth status` — confirm GitHub CLI is authenticated
+- [ ] `gh issue list --state open --repo koad/juno` returns real issue list — note which are blocked on koad
+- [ ] Know the specific blocked issue numbers before recording (e.g., fourty4 API auth #44)
+- [ ] `git log --author="Juno" --oneline` returns commits
+- [ ] `gpg --verify ~/.juno/trust/bonds/juno-to-sibyl.md.asc` returns "Good signature"
+- [ ] GitHub Sponsors page confirmed live: `open https://github.com/sponsors/koad`
+- [ ] Faber's Day 12 blog post status confirmed (may still be in progress — video can precede post)
+- [ ] Terminal configured: black bg (#000000), white text, 16px+ monospace, no prompt decorations
+- [ ] Clear scrollback before take: `clear && printf '\033[3J'`
+- [ ] Recording software armed (OBS preferred — browser shot in Shot 5 requires screen capture)
+- [ ] Quiet environment for voice-over
+
+**Recording command:**
+```bash
+# OBS preferred for this video — browser shot (Shot 5) requires screen capture
+# fallback:
+asciinema rec \
+  --title "The Week 1 Skeptics Were Right — koad:io Honest Accounting" \
+  --idle-time-limit 2 \
+  --env TERM,SHELL \
+  ~/.rufus/recordings/2026-04-12-skeptics-raw.cast
+```
+
+**What you record (7 shots, in order):**
+1. Empty terminal → opening VO: "I'm going to tell you four things the Week 1 skeptics got right."
+2. `grep -r "daemon\|automated enforcement" ~/.juno/GOVERNANCE.md | head -20` + `cat ~/.juno/GOVERNANCE.md | head -60` — Objection 1: no daemon yet
+3. `gh issue list --state open --repo koad/juno --limit 20` — Objection 2: manual coordination
+4. `gh issue list --state open --repo koad/juno --assignee koad --limit 20` + `gh issue view <blocked-issue-number> --repo koad/juno` — Objection 3: koad is the bottleneck (longest segment, 2 min is acceptable)
+5. `open https://github.com/sponsors/koad` (browser visible: zero sponsors) + `date` to ground — Objection 4: no sponsors yet
+6. `git -C ~/.juno log --oneline --since="2026-03-30" | tail -20` + `gpg --verify ~/.juno/trust/bonds/juno-to-sibyl.md.asc` — synthesis: what the four gaps don't touch
+7. Hold on GPG verify output, closing VO ("Week 2 is closing them."), fade to black — no music
+
+**Critical editing notes:**
+- Do NOT cut the "The skeptics are correct." pause in each objection segment — that beat is structural
+- Do NOT speed-ramp or cut the git log in Shot 6 — real-time only
+- Shot 4 (bottleneck) runs ~2 minutes — do not rush; this audience came for the honest accounting
+
+**Post-production (see Section 5):**
+- Extract thumbnail: open issue list frame from Shot 3 (`gh issue list` output)
+- Export: `2026-04-12-skeptics-final.mp4` + Twitter/X 60s clip from Shot 4 (bottleneck segment)
+- Faber's Day 12 blog post coordination required before Mercury distributes
+- Mercury distribution: YouTube + Twitter/X clip + HackerNews follow-up to Show HN thread + r/selfhosted
+
+**Full script:** `~/.rufus/productions/2026-04-12-week1-skeptics/script.md`
+**Full shot list:** `~/.rufus/productions/2026-04-12-week1-skeptics/shot-list.md`
+**Full record:** `~/.rufus/productions/2026-04-12-week1-skeptics/record.md`
+
+---
+
+## Section 2: In Development — Asset Captures (Not Full Videos)
+
+These productions have partial records or asset briefs. They are screenshot/thread capture sessions, not video recordings. Not ready for Mercury distribution.
 
 ---
 
@@ -256,27 +377,25 @@ These videos have production records started but are missing script or shot list
 
 ---
 
-## Section 3: Planned — Week 2 Videos Needing Production Records
+## Section 3: Planned — Week 2 Content Needing Production Records
 
-These are on the calendar (Days 8–14) but have no production records created yet. Each needs a `record.md`, `script.md`, and `shot-list.md` before recording can begin.
+These are on the calendar (Days 8–14). Blog posts are Faber-primary. Video slots for Apr 10 and Apr 12 now have full production records (see Section 1).
 
-| Day | Date | Title | Type | Notes |
-|-----|------|-------|------|-------|
+| Day | Date | Title | Type | Status |
+|-----|------|-------|------|--------|
 | Day 9 | Apr 9 | "How Vesta Specs What We Build" | Blog post assets | Needs Vesta review examples; Faber primary |
-| Day 10 | Apr 10 | "Show HN: Agent Home Directory" | Blog post (no video) | Faber's draft exists; needs live links added |
+| Day 10 | Apr 10 | "Show HN: Agent Home Directory" | Blog post + **video** | Blog: Faber draft exists, needs live links. Video: record complete — see Section 1 |
 | Day 11 | Apr 11 | "Files on Disk Beats Cloud" | Blog post (no video) | Faber's draft needs final section |
-| Day 12 | Apr 12 | "The Week 1 Skeptics Were Right" | Blog post (no video) | To write — Q&A format |
+| Day 12 | Apr 12 | "The Week 1 Skeptics Were Right" | Blog post + **video** | Blog: not yet written (Faber). Video: record complete — see Section 1 |
 | Day 13 | Apr 13 | "This Is Who Should Sponsor This" | Blog post (no video) | Sponsor pitch post; Sibyl archetype research needed |
 | Day 14 | Apr 14 | "Entities Can Fork and Diverge" | Blog post (no video) | Faber's draft exists; needs polish |
 
-**Week 2 video productions on the calendar (per Week 1 calendar Rufus production requirements):**
+**Week 2 video production status:**
 
-| Slot | Target Date | Content | Production Type |
-|------|-------------|---------|-----------------|
-| Apr 10 | Day 10 | Live demo or polished walkthrough | Video — no record exists |
-| Apr 12 | Day 12 | Documentary-style case study video | Video — no record exists |
-
-**Recommended:** Create production records for the Apr 10 and Apr 12 video slots before those dates. Faber needs to brief the content; Rufus builds the record.
+| Slot | Target Date | Title | Production Type | Status |
+|------|-------------|-------|-----------------|--------|
+| Apr 10 | Day 10 | Show HN: Agent Home Directory | Terminal screencast | Record complete — ready to record |
+| Apr 12 | Day 12 | The Week 1 Skeptics Were Right | Terminal screencast + browser | Record complete — ready to record |
 
 ---
 
@@ -333,6 +452,29 @@ When koad has time to record, use this priority order:
 - What: 10 screenshots; browser captures first (consecutive, fastest), terminal captures second
 - Blocking: Faber's Twitter thread for Day 8 cannot be written without these
 - Guide: `~/.rufus/productions/2026-04-08-coordination/shot-list.md`
+
+---
+
+### "I have 40–55 minutes (Week 2)"
+
+**Record:** "Show HN: Agent Home Directory" (Day 10 video)
+- Machine: thinker
+- Prerequisites: `~/.juno` current, `git log --author="Juno"` returns 6+ days, GPG verify returns "Good signature"
+- Core shots: cat identity → gpg verify trust bond → git log (DO NOT CUT) → clone close
+- Script: `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/script.md`
+- Shot list: `~/.rufus/productions/2026-04-10-show-hn-agent-home-directory/shot-list.md`
+
+---
+
+### "I have 60–80 minutes (Week 2)"
+
+**Record:** "The Week 1 Skeptics Were Right" (Day 12 video)
+- Machine: thinker — OBS preferred (browser shot required for sponsors segment)
+- Prerequisites: `gh auth status` working, blocked issues confirmed by number before recording, GPG verify passes
+- Core shots: 4 objection segments → synthesis → close. Each "The skeptics are correct." pause is structural — do not rush.
+- Coordinate with Faber: Day 12 blog post may not be written yet; video can precede post but Mercury holds distribution until Faber's post is ready
+- Script: `~/.rufus/productions/2026-04-12-week1-skeptics/script.md`
+- Shot list: `~/.rufus/productions/2026-04-12-week1-skeptics/shot-list.md`
 
 ---
 
@@ -426,6 +568,8 @@ For each completed video, hand Mercury:
 | Clone Walkthrough | YouTube, Twitter/X 60s clip | r/selfhosted, r/LocalLLaMA |
 | $200 Laptop | YouTube, Twitter/X 60s clip | HackerNews ("Show HN" format), r/selfhosted |
 | Sibyl Research | YouTube, Twitter/X 1-min clip | r/LocalLLaMA |
+| Show HN: Agent Home Directory | YouTube, Twitter/X 60s clip | HackerNews (Show HN comment thread), Dev.to |
+| The Week 1 Skeptics Were Right | YouTube, Twitter/X 60s clip (bottleneck segment) | HackerNews (follow-up to Show HN thread), r/selfhosted |
 
 ### Terminal capture guide
 
@@ -443,13 +587,15 @@ Full asciinema + ffmpeg workflow documented at:
 | Day 7 | Apr 7 | The $200 Laptop Experiment | DONE | DONE | Not done | Ready to record |
 | Day 7 | Apr 7 | Live Session: Sibyl Does Research | DONE | DONE | Not done | Ready to record (fourty4) |
 | Day 8 | Apr 8 | How Entities Talk (screenshots) | N/A | DONE | Not done | Ready to capture |
-| Day 9 | Apr 9 | How Vesta Specs What We Build | — | — | — | Needs production record |
-| Day 10 | Apr 10 | Show HN: Agent Home Directory | — | — | — | Blog post only (Faber) |
+| Day 9 | Apr 9 | How Vesta Specs What We Build | — | — | — | Blog post assets (Faber) |
+| Day 10 | Apr 10 | Show HN: Agent Home Directory (video) | DONE | DONE | Not done | Ready to record |
+| Day 10 | Apr 10 | Show HN: Agent Home Directory (blog) | N/A (Faber) | — | — | Faber draft exists |
 | Day 11 | Apr 11 | Files on Disk Beats Cloud | — | — | — | Blog post only (Faber) |
-| Day 12 | Apr 12 | Documentary-style Case Study | — | — | — | Needs production record |
+| Day 12 | Apr 12 | The Week 1 Skeptics Were Right (video) | DONE | DONE | Not done | Ready to record |
+| Day 12 | Apr 12 | The Week 1 Skeptics Were Right (blog) | N/A (Faber) | — | — | Not yet written |
 | Day 13 | Apr 13 | This Is Who Should Sponsor This | — | — | — | Blog post only (Faber) |
 | Day 14 | Apr 14 | Entities Can Fork and Diverge | — | — | — | Blog post only (Faber) |
 
 ---
 
-*Last updated: 2026-04-05 by Rufus*
+*Last updated: 2026-04-05 by Rufus — Week 2 videos (Apr 10, Apr 12) added to Section 1; full audit pass complete*
