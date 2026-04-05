@@ -101,7 +101,7 @@ SEGMENT 4: Demo        2:00–2:50    (~50s)  — entity-specific demo
 
 ## Series Plan — All Entities
 
-Priority order for production. First twelve are pre-production complete and ready to record.
+Priority order for production. First fifteen are pre-production complete and ready to record. Astro and Rufus are outside the initial 15-entity series scope.
 
 | Priority | Entity | Role | Demo Type | Production Record |
 |----------|--------|------|-----------|-------------------|
@@ -117,11 +117,11 @@ Priority order for production. First twelve are pre-production complete and read
 | 10 | **argus** | Diagnostics | `git log --author="Argus"` + `head CLAUDE.md` | `productions/entity-intro-argus/` — pre-production complete |
 | 11 | **salus** | Entity health | `head CLAUDE.md` + `ls reports/` | `productions/entity-intro-salus/` — pre-production complete |
 | 12 | **aegis** | Private counsel | `ls assessments/` + `head CLAUDE.md` | `productions/entity-intro-aegis/` — pre-production complete |
-| 13 | **mercury** | Publisher / distributor | Show distribution queue or publish command | TBD |
-| 14 | **veritas** | Quality and fact-check | Show a verification run on a brief | TBD |
-| 15 | **janus** | Cross-boundary coordination | Show a cross-entity message or bridge call | TBD |
-| 16 | **astro** | Framework exploration | Show a framework audit or probe | TBD |
-| 17 | **rufus** | Media production | Show a production record being created | TBD |
+| 13 | **mercury** | Publisher / distributor | Show posting schedule + distribution queue + ops structure | `productions/entity-intro-mercury/` — pre-production complete |
+| 14 | **veritas** | Quality and fact-check | `ls reviews/ \| wc -l` (21 reviews) + `head -20` of a real review showing verdict structure | `productions/entity-intro-veritas/` — pre-production complete |
+| 15 | **janus** | Stream watcher | `head -30 CLAUDE.md` showing surveillance scope + `head -20` of a watch log | `productions/entity-intro-janus/` — pre-production complete |
+| 16 | **astro** | Framework exploration | Show a framework audit or probe | TBD — not in initial series scope |
+| 17 | **rufus** | Media production | Show a production record being created | TBD — not in initial series scope |
 
 ---
 
