@@ -101,7 +101,7 @@ SEGMENT 4: Demo        2:00–2:50    (~50s)  — entity-specific demo
 
 ## Series Plan — All Entities
 
-Priority order for production. First six are pre-production complete and ready to record.
+Priority order for production. First twelve are pre-production complete and ready to record.
 
 | Priority | Entity | Role | Demo Type | Production Record |
 |----------|--------|------|-----------|-------------------|
@@ -111,16 +111,17 @@ Priority order for production. First six are pre-production complete and ready t
 | 4 | **vesta** | Protocol keeper | `ls specs/ \| wc -l` + `head` VESTA-SPEC-033 | `productions/entity-intro-vesta/` — pre-production complete |
 | 5 | **muse** | Visual designer | `ls briefs/` + `head` Alice UI brief | `productions/entity-intro-muse/` — pre-production complete |
 | 6 | **vulcan** | Builder | Closed issues + `git log --author="Vulcan"` on Alice | `productions/entity-intro-vulcan/` — pre-production complete |
-| 7 | **mercury** | Publisher / distributor | Show distribution queue or publish command | TBD |
-| 8 | **veritas** | Quality and fact-check | Show a verification run on a brief | TBD |
-| 9 | **alice** | Human onboarding interface | Show Level 0 interaction | TBD |
-| 10 | **juno** | Business orchestrator | Show issue triage and delegation | TBD |
-| 11 | **aegis** | Security and audit | Show a signed trust bond verification | TBD |
-| 12 | **janus** | Cross-boundary coordination | Show a cross-entity message or bridge call | TBD |
-| 13 | **argus** | Monitoring and observability | Show a system status report | TBD |
-| 14 | **salus** | Health and uptime | Show a health check output | TBD |
-| 15 | **astro** | Framework exploration | Show a framework audit or probe | TBD |
-| 16 | **rufus** | Media production | Show a production record being created | TBD |
+| 7 | **juno** | Business orchestrator | `git log --author="Juno"` + `cat memories/001-identity.md \| head -20` | `productions/entity-intro-juno/` — pre-production complete |
+| 8 | **livy** | Documentation lead | `ls docs/reference/` + `wc -l docs/reference/*.md` | `productions/entity-intro-livy/` — pre-production complete |
+| 9 | **alice** | Learning system | `ls ~/.alice/` + `ls chiron curricula levels` + `head level-00.md` | `productions/entity-intro-alice/` — pre-production complete |
+| 10 | **argus** | Diagnostics | `git log --author="Argus"` + `head CLAUDE.md` | `productions/entity-intro-argus/` — pre-production complete |
+| 11 | **salus** | Entity health | `head CLAUDE.md` + `ls reports/` | `productions/entity-intro-salus/` — pre-production complete |
+| 12 | **aegis** | Private counsel | `ls assessments/` + `head CLAUDE.md` | `productions/entity-intro-aegis/` — pre-production complete |
+| 13 | **mercury** | Publisher / distributor | Show distribution queue or publish command | TBD |
+| 14 | **veritas** | Quality and fact-check | Show a verification run on a brief | TBD |
+| 15 | **janus** | Cross-boundary coordination | Show a cross-entity message or bridge call | TBD |
+| 16 | **astro** | Framework exploration | Show a framework audit or probe | TBD |
+| 17 | **rufus** | Media production | Show a production record being created | TBD |
 
 ---
 
