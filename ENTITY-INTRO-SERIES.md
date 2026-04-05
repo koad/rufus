@@ -101,25 +101,26 @@ SEGMENT 4: Demo        2:00–2:50    (~50s)  — entity-specific demo
 
 ## Series Plan — All Entities
 
-Priority order for production. First three are in active pre-production.
+Priority order for production. First six are pre-production complete and ready to record.
 
 | Priority | Entity | Role | Demo Type | Production Record |
 |----------|--------|------|-----------|-------------------|
-| 1 | **chiron** | Curriculum architect | `ls` curricula levels + `cat level-00.md` | `productions/entity-intro-chiron/` |
-| 2 | **sibyl** | Research director | Invoke with question, show output + git commit | `productions/entity-intro-sibyl/` |
-| 3 | **faber** | Content strategist | `ls` posts dir + `cat` post header | `productions/entity-intro-faber/` |
-| 4 | **vulcan** | Builder | Show a recent PR or commit output | TBD |
-| 5 | **mercury** | Publisher / distributor | Show distribution queue or publish command | TBD |
-| 6 | **veritas** | Quality and fact-check | Show a verification run on a brief | TBD |
-| 7 | **muse** | UI polish and design | Show a UI diff or design artifact | TBD |
-| 8 | **alice** | Human onboarding interface | Show Level 0 interaction | TBD |
-| 9 | **juno** | Business orchestrator | Show issue triage and delegation | TBD |
-| 10 | **aegis** | Security and audit | Show a signed trust bond verification | TBD |
-| 11 | **janus** | Cross-boundary coordination | Show a cross-entity message or bridge call | TBD |
-| 12 | **argus** | Monitoring and observability | Show a system status report | TBD |
-| 13 | **salus** | Health and uptime | Show a health check output | TBD |
-| 14 | **astro** | Framework exploration | Show a framework audit or probe | TBD |
-| 15 | **rufus** | Media production | Show a production record being created | TBD |
+| 1 | **chiron** | Curriculum architect | `ls` curricula levels + `cat level-00.md` | `productions/entity-intro-chiron/` — pre-production complete |
+| 2 | **sibyl** | Research director | Invoke with question, show output + git commit | `productions/entity-intro-sibyl/` — pre-production complete |
+| 3 | **faber** | Content strategist | `ls` posts dir + `cat` post header | `productions/entity-intro-faber/` — pre-production complete |
+| 4 | **vesta** | Protocol keeper | `ls specs/ \| wc -l` + `head` VESTA-SPEC-033 | `productions/entity-intro-vesta/` — pre-production complete |
+| 5 | **muse** | Visual designer | `ls briefs/` + `head` Alice UI brief | `productions/entity-intro-muse/` — pre-production complete |
+| 6 | **vulcan** | Builder | Closed issues + `git log --author="Vulcan"` on Alice | `productions/entity-intro-vulcan/` — pre-production complete |
+| 7 | **mercury** | Publisher / distributor | Show distribution queue or publish command | TBD |
+| 8 | **veritas** | Quality and fact-check | Show a verification run on a brief | TBD |
+| 9 | **alice** | Human onboarding interface | Show Level 0 interaction | TBD |
+| 10 | **juno** | Business orchestrator | Show issue triage and delegation | TBD |
+| 11 | **aegis** | Security and audit | Show a signed trust bond verification | TBD |
+| 12 | **janus** | Cross-boundary coordination | Show a cross-entity message or bridge call | TBD |
+| 13 | **argus** | Monitoring and observability | Show a system status report | TBD |
+| 14 | **salus** | Health and uptime | Show a health check output | TBD |
+| 15 | **astro** | Framework exploration | Show a framework audit or probe | TBD |
+| 16 | **rufus** | Media production | Show a production record being created | TBD |
 
 ---
 
