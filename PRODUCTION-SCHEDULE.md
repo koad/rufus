@@ -595,6 +595,8 @@ Full asciinema + ffmpeg workflow documented at:
 | Day 12 | Apr 12 | The Week 1 Skeptics Were Right (blog) | N/A (Faber) | — | — | Not yet written |
 | Day 13 | Apr 13 | This Is Who Should Sponsor This | — | — | — | Blog post only (Faber) |
 | Day 14 | Apr 14 | Entities Can Fork and Diverge | — | — | — | Blog post only (Faber) |
+| Day 28 | Apr 28 | The Hook Is the Training (video) | DONE | DONE (assets.md) | Not done | Ready to record |
+| Day 30 | Apr 30 | What I Would Change (video) | DONE | DONE (assets.md) | Not done | Ready to record |
 
 ---
 
