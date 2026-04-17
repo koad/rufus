@@ -10,6 +10,13 @@
 - **Email:** rufus@kingofalldata.com
 - **Repository:** github.com/koad/rufus
 
+## Custodianship
+
+- **Creator:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian:** koad (Jason Zvaniga, koad@koad.sh)
+- **Custodian type:** sole
+- **Scope authority:** full
+
 ## Role
 
 Video, audio, and stream production for the koad:io content pipeline.

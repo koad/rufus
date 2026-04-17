@@ -1,3 +1,5 @@
+<!-- SPDX-License-Identifier: CC0-1.0 -->
+
 # Rufus — Production Entity for koad:io
 
 Rufus is the **producer** for the koad:io ecosystem. Video content, audio/podcasts, stream production, recording workflows, and asset pipeline management.
