@@ -6,5 +6,7 @@
   "dispatch": {
     "color": "orange",
     "model": "sonnet"
-  }
+  },
+  "handle": "rufus",
+  "name": "Rufus"
 }

@@ -1,19 +1,29 @@
 # PRIMER: Rufus
 
-Rufus is the production entity for the koad:io ecosystem — video, audio, stream production, recording workflows, and asset pipeline management. Faber decides what to make; Rufus makes it. Mercury publishes it. Rufus transforms raw content into production-ready assets using sovereign, version-controlled workflows.
+Rufus is the production entity for the koad:io ecosystem — video, audio, stream production,
+recording workflows, and asset pipeline management. Faber decides what to make; Rufus makes
+it. Mercury publishes it. Rufus transforms raw content into production-ready assets using
+sovereign, version-controlled workflows.
 
 ---
 
 ## Current State
 
-**Gestated and on GitHub.** Production pipeline active for Reality Pillar content series.
+**Pipeline loaded, on hold pending Faber restart arc.**
 
-### What's Complete
-- Production workflow defined
-- Reality Pillar Week 1 schedule authored (`WEEK1-STATUS.md`)
-- Alice production plan authored (`ALICE_PRODUCTION_PLAN.md`)
-- Production schedule framework live (`PRODUCTION-SCHEDULE.md`)
-- `production/` and `productions/` directory structure in place
+Faber filed a restart arc proposing 3 posts/week Mon-Wed-Fri beginning 2026-04-28.
+Mercury posts 00010-00013 lapsed. Faber annotated calendar HOLD on Rufus video brief
+schedule pending Mercury publish surface confirmation.
+
+No recordings have been completed to date. All pipeline work is pre-production (scripts,
+shot lists, storyboards, briefs). When the Mercury surface is confirmed and Faber's arc
+restarts, the day-28+ production library becomes the primary work queue.
+
+### What's Complete (pre-production only)
+- 13 entity intro productions with full pre-production (script, shot list, record.md)
+- "21 Entities, One Laptop" 60s proof clip — storyboard + capture script ready
+- Show HN: Agent Home Directory — pre-production complete
+- `productions/day-28-*` through `productions/day-51-*` — 24 day-arc folders with assets.md + script.md
 
 ### Production Pipeline Position
 
@@ -23,21 +33,31 @@ Faber (strategy + brief) → Rufus (produces assets) → Mercury (distributes)
 
 ---
 
-## Active Work
+## Active Blockers
 
-- Day 6 content production: "Trust Bonds Aren't Policy" assets
-- Day 7 video scripting (in progress)
-- Week 1 catch-up: Day 3 screenshots not yet produced (noted in WEEK1-STATUS.md)
-
-Work arrives from Faber briefs and GitHub Issues on `koad/rufus`.
+- **asciinema + ffmpeg absent on wonderland** — pre-flight confirmed 2026-04-14;
+  needs install before any cast/MP4 recording. Tickle filed 2026-04-25.
+- **flowbie SSH** — OBS batch recording requires flowbie SSH stable; unconfirmed
+- **fourty4 API auth** — koad/juno#44 blocks automated pipelines
+- **wonderland GPU VRAM** — Chatterbox Turbo voice pipeline needs VRAM measurement before build
+- **Faber restart arc** — video production brief on HOLD until 2026-04-28 Mercury surface confirm
 
 ---
 
-## Blocked
+## Lyra Spec — Stage-Mode Ambient
 
-- **flowbie access** — OBS and recording workflows require flowbie (24/7 content studio machine). SSH connectivity must be confirmed each session.
-- **fourty4 API auth** — koad/juno#44 blocks some automated production pipelines
-- **Day 3 assets** — portal screenshots were never filed; Day 3 post may have launched without them (audit needed)
+Lyra delivered `~/.lyra/palettes/stage-mode-ambient.md` (2026-04-25). Synthesized ambient
+audio direction for 24/7 kingdom stream: D minor Aeolian bed + five emission-triggered event
+stings. Full build notes addressed to Rufus. Do NOT build until Faber stage-mode brief lands
+and koad approves. Spec acknowledged via tickle 2026-04-25.
+
+---
+
+## Hardware Map
+
+- **flowbie**: 24/7 always-on, X11, OBS — studio machine
+- **fourty4**: Mac Mini, ollama inference, backup recording
+- **wonderland**: primary ops + coordination hub
 
 ---
 
@@ -45,11 +65,10 @@ Work arrives from Faber briefs and GitHub Issues on `koad/rufus`.
 
 | File | Purpose |
 |------|---------|
-| `README.md` | Entity overview and role |
-| `CLAUDE.md` | Full identity, scope, production responsibilities |
-| `WEEK1-STATUS.md` | Reality Pillar Week 1 master production schedule |
-| `PRODUCTION-SCHEDULE.md` | Rolling production schedule |
-| `ALICE_PRODUCTION_PLAN.md` | Alice video/asset production plan |
-| `production/` | In-progress production work |
-| `scripts/` | Production automation scripts |
-| `distribution/` | Output assets staged for Mercury |
+| `ENTITY.md` | Full identity, scope, production responsibilities |
+| `voice-tech-watch.md` | Living Wednesday watch dashboard (last updated 2026-04-23) |
+| `productions/` | Per-topic production folders (pre-production docs) |
+| `production/` | Active/storyboard files for in-flight work |
+| `recordings/` | Raw cast files and blocked-production reports |
+| `distribution/` | Mercury handoff notes staged for distribution |
+| `briefs/` | Faber briefs and Juno flight observations |

@@ -1,10 +1,10 @@
 ---
 name: Feature request
-about: Suggest a capability or improvement
+about: Suggest a capability or improvement for Rufus
 labels: feature-request
 ---
 
-**What would you like this entity to do?**
+**What would you like Rufus to do?**
 <!-- Describe the capability you want. -->
 
 **Why do you want it?**
@@ -15,3 +15,7 @@ labels: feature-request
 
 **Additional context**
 <!-- Any other detail that helps. -->
+
+---
+
+*Filed against [github.com/koad/rufus](https://github.com/koad/rufus) — see [Rufus's public profile](https://kingofalldata.com/rufus) for context.*
